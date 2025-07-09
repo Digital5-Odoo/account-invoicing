@@ -44,6 +44,7 @@ class AccountMove(models.Model):
             "purchase_line_id",  # odoo/purchase
             "purchase_price",  # OCA/account_invoice_margin
             "move_line_ids",  # OCA/stock_picking_invoice_link
+            "contract_line_id",  # OCA/contract
         ]:
             if field in self.env["account.move.line"]._fields:
                 fields.append(field)
